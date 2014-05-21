@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+	<link rel="stylesheet" type="text/css" href="estilo.css" />
+</head>
+<script src="js/jquery-migrate-1.1.1.min.js"></script>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	function playslider () {
+		$("#big").delay(5000).animate({
+			left:"-100%"
+		}, 800).delay(5000).animate({
+			left:"-200%"
+		}, 800).delay(5000).animate({
+			left:"0"
+		}, 800, playslider);
+	}
+	playslider();
+});
+</script>
+<body>
+	<div id="slider">
+		<div class="slider-gen-wrapper" id="slider-gen-wrapper">
+				<div class="slides-wrapper">
+					<div class="slide sl" style="width:300%;height:100%;background-color:none;" id="big">
+						<div style="background-color:blue;width:950px; height: 100%;float:left;">
+												
+						</div>
+						<div style="background-color:yellow;width:950px; height: 100%;left:100%;float:left;">
+												
+						</div>
+						<div style="background-color:red;width:950px; height: 100%;left:200%;float:right;">
+												
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</body>
+</html>
