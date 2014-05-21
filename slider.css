@@ -1,61 +1,47 @@
-.slider-gen-wrapper
-{
-	background-color:none;
-	position:absolute;
-	height:250px;
-	top:0px;
-	bottom:0px;
-	width:950px;
+/* Setting the size of the slides (size of each image) */
+.slides-wrapper, .slide, .slide div {
+	height: 280px;
+	width: 480px;
+}
+.slide {
+	width: 1440px; /* Three times the size of each image */
+}
+
+
+/* White Border */
+.slides-wrapper {			/* Margin for the white border */
+	margin-left:10px;    /* Set these values according to your will */
+	margin-top:10px;		/* Remember to adjust .slider-gen-wrapper's */ 
+}								/*	width & height when changing these values */
+
+
+/* Next height and width values are set to 20px bigger then first values values.
+That's to create the white border. */
+.slider-gen-wrapper {
+	height:300px;
+	width:500px;
+}
+
+/*************************************************************************************/
+/* POSITIONING */
+.slider-gen-wrapper {
+	top: 20px;
 	left:50%;
-	margin-left:-475px;
-	right:15px;
-	overflow:hidden;
-	background-color:white;
+	margin-left: -250px;
 }
 
-.slider-sec-wrapper
-{
-	height:auto;
-	width:100%;
-}
+/*************************************************************************************/
+/* Colors :) */
+body {background-color: silver;}
+.slider-gen-wrapper {background-color:white;}
 
-.slides-wrapper
-{
-	position:absolute;
-	left:0px;
-	top:0px;
-	height:250px;
-	width:950px;
-	overflow:hidden;
-}
 
-.slide 
-{
-	width:100%;
-	height:100%;
-	position:absolute;
-	left:0;
-	padding-top:0%;
-	overflow:hidden;
-}
-
-.slide img
-{
-	width:100%;
-	overflow:hidden;
-}
-
-.third
-{
-	opacity:1;
-	z-index:-5;
-}
-
-.sl-slider
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width:100%;
-	height:100%;
-}
+/*************************************************************************************
+	     			DEFAULT
+			Do not change this
+*************************************************************************************/
+.slider-gen-wrapper {position: absolute;}
+.slide {
+	position:relative;}
+.slide div {float: left;}
+.slides-wrapper {overflow: hidden;}
