@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title></title>
+	<title>Easy Slider by Matheus Martins</title>
 	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+	<meta name="author" content="Matheus Martins" />
 	<link rel="stylesheet" type="text/css" href="slider.css" />
 </head>
-<script src="js/jquery-migrate-1.1.1.min.js"></script>
-<script src="js/jquery-1.9.1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 <script type="text/javascript">
 $(document).ready(function(){
-	function playslider () {
-		$("#big").delay(5000).animate({
-			left:"-100%"
-		}, 800).delay(5000).animate({
-			left:"-200%"
-		}, 800).delay(5000).animate({
-			left:"0"
-		}, 800, playslider);
+	function playSlider () {
+		var tt = 2000;						  /* Transition Time */
+		$(".slide").delay(tt).animate({
+			left:"-480px"                /**** Size of the slide (image) ****/
+		}, 1000).delay(tt).animate({
+			left:"-960px"                /**** Twice the size of the slide (image) ****/
+		}, 1000).delay(tt).animate({
+			left:"0px"
+		}, 1000, playSlider );
 	}
-	playslider();
+	playSlider();
 });
 </script>
+
 <body>
-	<div id="slider">
-		<div class="slider-gen-wrapper" id="slider-gen-wrapper">
-				<div class="slides-wrapper">
-					<div class="slide sl" style="width:300%;height:100%;background-color:none;" id="big">
-						<div style="background-color:blue;width:950px; height: 100%;float:left;">
-												
+
+<div class="slider-gen-wrapper">
+	
+		<div class="slides-wrapper">
+
+				<div class="slide">
+				
+						<div>
+								<img src="i/first.jpg" alt="First image of slider" />
 						</div>
-						<div style="background-color:yellow;width:950px; height: 100%;left:100%;float:left;">
-												
+						<div>
+								<img src="i/second.jpg" alt="Second image of slider" />
 						</div>
-						<div style="background-color:red;width:950px; height: 100%;left:200%;float:right;">
-												
+						<div>
+								<img src="i/third.jpg" alt="Third image of slider" />
 						</div>
-					</div>
+						
 				</div>
-			</div>
+
 		</div>
-		</div>
-	</div>
+		
+</div>
+	
 </body>
 </html>
